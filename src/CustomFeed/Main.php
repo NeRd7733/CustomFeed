@@ -17,7 +17,7 @@ class Main extends PluginCommand{
 
 	public $plugin;
 
-	public function __construct(string $name, Loader $plugin){
+	public function __construct(string $name, Main $plugin){
 		parent::__construct($name, $plugin);
 		$this->plugin = $plugin;
 		$this->setDescription("Feed yourself");
