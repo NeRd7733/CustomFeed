@@ -25,12 +25,12 @@ class Main extends PluginCommand{
 	public function execute(CommandSender $sender, string $commandLabel, array $args): bool{
 		if(!$sender instanceof Player) return false;
 		if(!$sender->hasPermission("server.feed")){
-			$sender->sendMessage(TextFormat::RED . "Sorry, you do not have permission to use this command - Plugin by xZolpha#0001");
+			$sender->sendMessage(TextFormat::RED . "Sorry, you do not have permission to use this command - Plugin by Zolpha#0001");
 			return false;
 		}
 		$sender->setFood(20);
 		$sender->setSaturation(20);
-		$sender->sendMessage(TextFormat::GREEN . "You have successfully beed fed - Plugin by xZolpha#0001");
+		$sender->sendMessage(TextFormat::GREEN . "You have successfully beed fed - Plugin by Zolpha#0001");
 		return true;
 	}
 }
