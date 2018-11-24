@@ -24,7 +24,7 @@ class Main extends PluginCommand{
 	}
 	public function execute(CommandSender $sender, string $commandLabel, array $args): bool{
 		if(!$sender instanceof Player) return false;
-		if(!$sender->hasPermission("valion.feed")){
+		if(!$sender->hasPermission("server.feed")){
 			$sender->sendMessage(TextFormat::RED . "Sorry, you do not have permission to use this command - Plugin by xZolpha#0001");
 			return false;
 		}
