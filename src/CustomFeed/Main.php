@@ -30,7 +30,7 @@ class Main extends PluginCommand{
 		}
 		$sender->setFood(20);
 		$sender->setSaturation(20);
-		$sender->sendMessage(TextFormat . "You have successfully beed fed - Plugin by xZolpha#0001");
+		$sender->sendMessage(TextFormat::GREEN . "You have successfully beed fed - Plugin by xZolpha#0001");
 		return true;
 	}
 }
