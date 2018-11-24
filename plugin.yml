@@ -4,7 +4,7 @@ version: 1.0.0
 api: 3.0.0, 4.0.0
 commands:
   feed:
-    description: Set hunger to full
+    description: Have yourself full hunger!
       usage: /feed
         permission: valion.feed
 
