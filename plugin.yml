@@ -6,6 +6,6 @@ commands:
   feed:
     description: Have yourself full hunger!
       usage: /feed
-        permission: valion.feed
+        permission: server.feed
 
 author: xZolpha
