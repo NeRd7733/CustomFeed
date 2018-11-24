@@ -1,11 +1,11 @@
 name: CustomFeed
-description: Simple command to fill players hunger
-
 main: CustomFeed\Main
 version: 1.0.0
-api: 3.0.0
+api: 3.0.0, 4.0.0
 commands:
   feed:
-    permission: valion.feed
+    description: Set hunger to full
+      usage: /feed
+        permission: valion.feed
 
 author: xZolpha
