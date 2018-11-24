@@ -1,11 +1,11 @@
-name: CustomHeal
-description: Simple Heal plugin
+name: CustomFeed
+description: Simple command to fill players hunger
 
-main: Main
+main: CustomFeed\Main
 version: 1.0.0
-api: 3.0.0
+api: [3.0.0, 4.0.0]
 commands:
-  heal:
-    permission: server.heal
+  feed:
+    permission: valion.feed
 
 author: xZolpha
