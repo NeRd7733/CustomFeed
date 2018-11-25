@@ -3,34 +3,32 @@
  * Created by PhpStorm.
  * User: Zolpha#0001
  * Date: 24-Nov-18
- * Time: 1:16pm
  */
 
 namespace CustomFeed;
 
 use pocketmine\command\CommandSender;
-use pocketmine\command\PluginCommand;
-use pocketmime\Player;
-use pocketmine\utils\TextFormat;
+use pocketmine\Player;
+use pocketmine\event\Listener;
+use pocketmine\plugin\PluginBase;
+use pocketmine\utils\TextFormat as R;
+use pocketmine\command\Command;
 
-class Main extends PluginCommand{
+class Main extends PluginBase implements Listener{
 
-	public $plugin;
-
-	public function __construct(string $name, Main $plugin){
-		parent::__construct($name, $plugin);
-		$this->plugin = $plugin;
-		$this->setDescription("Feed yourself");
+	public function onEnable(): void{
+		$this->getServer()->getPluginManager()->registerEvents($this, $this);
 	}
-	public function execute(CommandSender $sender, string $commandLabel, array $args): bool{
+
+	public function onCommand(CommandSender $sender, Command $command, string $label, array $args): bool{
 		if(!$sender instanceof Player) return false;
-		if(!$sender->hasPermission("server.feed")){
-			$sender->sendMessage(TextFormat::RED . "Sorry, you do not have permission to use this command - Plugin by Zolpha#0001");
+		if(!$sender->hasPermission("valion.feed")){
+			$sender->sendMessage(R::RED . "How dare you use this command without permission!");
 			return false;
 		}
 		$sender->setFood(20);
 		$sender->setSaturation(20);
-		$sender->sendMessage(TextFormat::GREEN . "You have successfully beed fed - Plugin by Zolpha#0001");
+		$sender->sendMessage(R::GREEN . "You've been fed!");
 		return true;
 	}
 }
